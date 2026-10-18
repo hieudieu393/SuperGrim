@@ -53,4 +53,3 @@ jobs:
           body: "Automatic release from commit ${{ env.HEAD_SHA }}."
           files: |
             bukkit/build/libs/supergrim-bukkit-*.jar
-            fabric/build/libs/supergrim-fabric-*.jar

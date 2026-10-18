@@ -15,7 +15,7 @@
  <br>
 </div>
 
-SuperGrim is an open-source Minecraft anticheat fork of [Grim](https://github.com/GrimAnticheat/Grim), maintained by **Onxe**. It supports Minecraft versions 1.8–26.3 and keeps the existing SuperGrim-specific checks and behavior while tracking upstream changes.
+SuperGrim is an open-source Minecraft anticheat fork of [Grim](https://github.com/GrimAnticheat/Grim), maintained by **Onxe**. It targets Bukkit/Spigot, Paper, and Folia on Minecraft versions 1.8–26.3 and keeps the existing SuperGrim-specific checks and behavior while tracking upstream changes.
 
 ## Downloads
 
@@ -24,8 +24,8 @@ SuperGrim is an open-source Minecraft anticheat fork of [Grim](https://github.co
 
 ## Requirements & Installation
 
-- Java 17 or higher for supported server versions. Minecraft 26.1+ Fabric builds require Java 25.
-- A Spigot, Paper, Folia, or Fabric server environment. *For more details, see [Supported-environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments).*
+- Java 17 or higher for supported server versions. Use the Java version required by your Minecraft server.
+- A Spigot, Paper, or Folia server environment. *For more details, see [Supported-environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments).*
 
 If you use a proxy such as Velocity or BungeeCord:
 - If you use Geyser, Floodgate must be installed on the backend server (where SuperGrim runs) so it can access the Floodgate API.
@@ -54,7 +54,7 @@ information.
 1. `git clone https://github.com/hieudieu393/SuperGrim.git`
 2. `cd SuperGrim`
 3. `./gradlew build`
-4. The final jars will compile into the `<platform>/build/libs` folders
+4. The plugin jar is written to `bukkit/build/libs/supergrim-bukkit-<version>.jar`.
 
 ## SuperGrim Core Features
 

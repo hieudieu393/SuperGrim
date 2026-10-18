@@ -29,3 +29,21 @@ jobs:
 
       - name: Build and test
         run: ./gradlew build -PmavenLocalOverride=false
+
+      - name: Verify Bukkit artifact and test reports
+        run: python3 scripts/verify_bukkit_build.py
+
+      - name: Upload Bukkit artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: supergrim-bukkit
+          path: bukkit/build/libs/supergrim-bukkit-*.jar
+          if-no-files-found: error
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: supergrim-test-reports
+          path: common/build/test-results/test/TEST-*.xml
+          if-no-files-found: warn

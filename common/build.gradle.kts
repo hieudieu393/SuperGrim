@@ -63,7 +63,7 @@ dependencies {
         }
         exclude(group = "org.yaml", module = "snakeyaml")
     }
-    // Bump snakeyaml (transitive dep of configuralize) 1.29 -> 2.2+ for geyser-fabric
+    // Bump snakeyaml (transitive dep of configuralize) 1.29 -> 2.2+ for Geyser compatibility
     api(libs.snakeyaml)
     api(libs.fastutil)
     api(libs.adventure.text.minimessage)

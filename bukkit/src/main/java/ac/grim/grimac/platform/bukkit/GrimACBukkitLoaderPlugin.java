@@ -94,7 +94,7 @@ public final class GrimACBukkitLoaderPlugin extends JavaPlugin implements Platfo
             return;
         }
 
-        Path legacyFolder = parent.resolve("SuperGrim");
+        Path legacyFolder = parent.resolve("GroundedGrim");
         try {
             if (LegacyDataFolderMigration.migrate(legacyFolder, currentFolder)) {
                 getLogger().info("Migrated plugin data from " + legacyFolder.getFileName() + " to " + currentFolder.getFileName() + ".");

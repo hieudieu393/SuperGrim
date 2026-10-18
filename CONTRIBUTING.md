@@ -9,9 +9,9 @@ make the process go more smoothly.*
 
 - **Compatibility**
   - Any changes must be compatible with
-  the [supported environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments) (Spigot, Paper, Folia, Fabric, etc.)
+  the [supported environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments) (Spigot, Paper, and Folia)
   - The plugin must be compatible with minecraft versions 1.8 and higher. Exempting checks from specific versions is acceptable.
-  - The plugin must run on Java 17 or higher for supported server versions. Minecraft 26.1+ Fabric builds require Java 25.
+  - The plugin must run on Java 17 or higher for supported server versions. Use the Java version required by the Minecraft server.
 
 - **Non-acceptable pull requests**
   - Heuristic-based checks will not be accepted; however, basic rate limiting such as blocking attacks based on CPS is acceptable.
@@ -32,7 +32,7 @@ make the process go more smoothly.*
 ### Development Notes
 
 - SuperGrim is built using [Gradle](https://gradle.org/) kotlin scripts.
-- Java 25 is currently required to build the project. Java 17 remains the minimum runtime for supported server versions that use it.
+- The build uses a Java 21 toolchain and emits Java 17 bytecode. CI runs on JDK 25. Use the runtime required by your Minecraft server.
 
 ### Questions & Support
 
