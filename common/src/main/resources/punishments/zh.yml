@@ -19,7 +19,7 @@ Punishments:
       - "1:1 [log]"
       - "1:0 [webhook]"
       - "1:0 [proxy]"
-      - "1:0 ban %player% [GroundedGrim] Protocol violation (%check_name%)"
+      - "1:0 ban %player% [SuperGrim] Protocol violation (%check_name%)"
   BehaviorAAlert:
     remove-violations-after: 300
     checks:
@@ -46,7 +46,7 @@ Punishments:
       - "1:1 [log]"
       - "1:0 [webhook]"
       - "1:0 [proxy]"
-      - "5:0 ban %player% [GroundedGrim] Crash exploit (%check_name%)"
+      - "5:0 ban %player% [SuperGrim] Crash exploit (%check_name%)"
   CrashBAlert:
     remove-violations-after: 300
     checks:
@@ -63,7 +63,7 @@ Punishments:
       - "1:1 [alert]"
       - "5:10 [log]"
       - "5:0 [webhook]"
-      - "10:0 ban %player% [GroundedGrim] Exploit (%check_name%)"
+      - "10:0 ban %player% [SuperGrim] Exploit (%check_name%)"
   PlaceBan:
     remove-violations-after: 300
     checks:
@@ -73,7 +73,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "1:0 [webhook]"
-      - "1:0 ban %player% [GroundedGrim] Invalid placement (%check_name%)"
+      - "1:0 ban %player% [SuperGrim] Invalid placement (%check_name%)"
   BadPacketsWKick:
     remove-violations-after: 300
     checks:
@@ -82,7 +82,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "5:0 [webhook]"
-      - "10:0 kick %player% [GroundedGrim] Protocol violation (%check_name%)"
+      - "10:0 kick %player% [SuperGrim] Protocol violation (%check_name%)"
   BadPacketsFKick:
     remove-violations-after: 300
     checks:
@@ -91,7 +91,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "10:0 [webhook]"
-      - "100:0 kick %player% [GroundedGrim] Protocol violation (%check_name%)"
+      - "100:0 kick %player% [SuperGrim] Protocol violation (%check_name%)"
   ProtocolKick:
     remove-violations-after: 300
     checks:
@@ -106,7 +106,7 @@ Punishments:
       - "1:1 [log]"
       - "10:0 [webhook]"
       - "10:0 [proxy]"
-      - "20:0 kick %player% [GroundedGrim] Protocol violation (%check_name%)"
+      - "20:0 kick %player% [SuperGrim] Protocol violation (%check_name%)"
   Place:
     remove-violations-after: 300
     checks:
@@ -138,7 +138,7 @@ Punishments:
       - "1:1 [log]"
       - "5:0 [webhook]"
       - "5:0 [proxy]"
-      - "60:0 kick %player% [GroundedGrim] Combat violation (%check_name%)"
+      - "60:0 kick %player% [SuperGrim] Combat violation (%check_name%)"
   WallHit:
     remove-violations-after: 300
     checks:
@@ -156,7 +156,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "1:0 [webhook]"
-      - "7:0 kick %player% [GroundedGrim] Combat violation (%check_name%)"
+      - "7:0 kick %player% [SuperGrim] Combat violation (%check_name%)"
   TriggerKick:
     remove-violations-after: 300
     checks:
@@ -165,7 +165,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "1:0 [webhook]"
-      - "7:0 kick %player% [GroundedGrim] Combat violation (%check_name%)"
+      - "7:0 kick %player% [SuperGrim] Combat violation (%check_name%)"
   TriggerbotKick:
     remove-violations-after: 300
     checks:
@@ -174,7 +174,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "5:0 [webhook]"
-      - "30:0 kick %player% [GroundedGrim] Combat violation (%check_name%)"
+      - "30:0 kick %player% [SuperGrim] Combat violation (%check_name%)"
   AutoTotemKick:
     remove-violations-after: 300
     checks:
@@ -183,7 +183,7 @@ Punishments:
       - "1:1 [alert]"
       - "5:10 [log]"
       - "5:0 [webhook]"
-      - "10:0 kick %player% [GroundedGrim] AutoTotem (%check_name%)"
+      - "10:0 kick %player% [SuperGrim] AutoTotem (%check_name%)"
   AirStuck:
     remove-violations-after: 300
     checks:
@@ -203,7 +203,7 @@ Punishments:
       - "1:1 [alert]"
       - "5:10 [log]"
       - "5:0 [webhook]"
-      - "7:0 kick %player% [GroundedGrim] Inventory violation (%check_name%)"
+      - "7:0 kick %player% [SuperGrim] Inventory violation (%check_name%)"
   InventoryDKick:
     remove-violations-after: 300
     checks:
@@ -212,7 +212,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "5:0 [webhook]"
-      - "30:0 kick %player% [GroundedGrim] Inventory violation (%check_name%)"
+      - "30:0 kick %player% [SuperGrim] Inventory violation (%check_name%)"
   InventoryE:
     remove-violations-after: 300
     checks:
@@ -282,7 +282,7 @@ Punishments:
       - "1:1 [alert]"
       - "5:10 [log]"
       - "5:0 [webhook]"
-      - "7:0 kick %player% [GroundedGrim] Elytra violation (%check_name%)"
+      - "7:0 kick %player% [SuperGrim] Elytra violation (%check_name%)"
   ElytraJKick:
     remove-violations-after: 300
     checks:
@@ -300,7 +300,7 @@ Punishments:
       - "1:1 [alert]"
       - "5:10 [log]"
       - "5:0 [webhook]"
-      - "10:0 kick %player% [GroundedGrim] Elytra violation (%check_name%)"
+      - "10:0 kick %player% [SuperGrim] Elytra violation (%check_name%)"
   ElytraOAlert:
     remove-violations-after: 300
     checks:
@@ -351,7 +351,7 @@ Punishments:
       - "1:1 [alert]"
       - "1:1 [log]"
       - "10:0 [webhook]"
-      - "50:0 kick %player% [GroundedGrim] Sprint violation (%check_name%)"
+      - "50:0 kick %player% [SuperGrim] Sprint violation (%check_name%)"
   Misc:
     remove-violations-after: 300
     checks:

@@ -79,3 +79,6 @@ fabric/run/
 .ignored/
 .claude/
 /workspace.gradle.kts
+
+# Local isolated worktrees
+/.worktrees/

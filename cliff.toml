@@ -21,7 +21,7 @@ trim = true
 # Your previous settings here are perfect, no changes needed
 filter_unconventional = false
 skip_unconventional = false
-remote = "https://github.com/GrimAnticheat/Grim"
+remote = "https://github.com/hieudieu393/SuperGrim"
 commit_parsers = [
     { message = "^feat", group = "🚀 Features" },
     { message = "^fix", group = "🐛 Fixes" },

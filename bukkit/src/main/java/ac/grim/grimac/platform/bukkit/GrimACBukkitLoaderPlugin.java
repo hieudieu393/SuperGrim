@@ -38,6 +38,7 @@ import ac.grim.grimac.platform.bukkit.scheduler.folia.FoliaPlatformScheduler;
 import ac.grim.grimac.platform.bukkit.sender.BukkitSenderFactory;
 import ac.grim.grimac.platform.bukkit.utils.placeholder.PlaceholderAPIExpansion;
 import ac.grim.grimac.utils.anticheat.LogUtil;
+import ac.grim.grimac.utils.files.LegacyDataFolderMigration;
 import ac.grim.grimac.utils.lazy.LazyHolder;
 import com.github.retrooper.packetevents.PacketEventsAPI;
 import io.github.retrooper.packetevents.factory.spigot.SpigotPacketEventsBuilder;
@@ -52,6 +53,9 @@ import org.incendo.cloud.brigadier.CloudBrigadierManager;
 import org.incendo.cloud.bukkit.CloudBukkitCapabilities;
 import org.incendo.cloud.execution.ExecutionCoordinator;
 import org.incendo.cloud.paper.LegacyPaperCommandManager;
+
+import java.io.IOException;
+import java.nio.file.Path;
 
 public final class GrimACBukkitLoaderPlugin extends JavaPlugin implements PlatformLoader {
     public static GrimACBukkitLoaderPlugin LOADER;
@@ -78,8 +82,29 @@ public final class GrimACBukkitLoaderPlugin extends JavaPlugin implements Platfo
 
     @Override
     public void onLoad() {
+        migrateLegacyDataFolder();
         LOADER = this;
         GrimAPI.INSTANCE.load(this, this.getBukkitInitTasks());
+    }
+
+    private void migrateLegacyDataFolder() {
+        Path currentFolder = getDataFolder().toPath();
+        Path parent = currentFolder.getParent();
+        if (parent == null) {
+            return;
+        }
+
+        Path legacyFolder = parent.resolve("SuperGrim");
+        try {
+            if (LegacyDataFolderMigration.migrate(legacyFolder, currentFolder)) {
+                getLogger().info("Migrated plugin data from " + legacyFolder.getFileName() + " to " + currentFolder.getFileName() + ".");
+            }
+        } catch (IOException exception) {
+            String message = "Cannot safely migrate legacy plugin data from " + legacyFolder + " to " + currentFolder + ": "
+                    + exception.getMessage() + ". Resolve the folder conflict or filesystem issue, then restart SuperGrim.";
+            getLogger().severe(message);
+            throw new IllegalStateException(message, exception);
+        }
     }
 
     private Initable[] getBukkitInitTasks() {

@@ -135,15 +135,15 @@ jobs:
             - name: Upload Bukkit Artifact
               uses: actions/upload-artifact@v6
               with:
-                  name: grimac-bukkit
-                  path: ${{ github.workspace }}/bukkit/build/libs/grimac-bukkit-${{ env.BUILD_VERSION }}.jar
+                  name: supergrim-bukkit
+                  path: ${{ github.workspace }}/bukkit/build/libs/supergrim-bukkit-${{ env.BUILD_VERSION }}.jar
                   if-no-files-found: error
 
             - name: Upload Fabric Artifact
               uses: actions/upload-artifact@v6
               with:
-                  name: grimac-fabric
-                  path: ${{ github.workspace }}/fabric/build/libs/grimac-fabric-${{ env.BUILD_VERSION }}.jar
+                  name: supergrim-fabric
+                  path: ${{ github.workspace }}/fabric/build/libs/supergrim-fabric-${{ env.BUILD_VERSION }}.jar
                   if-no-files-found: error
 
             #------------------------------------------------------------------
@@ -260,8 +260,8 @@ jobs:
                   modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
                   modrinth-featured: ${{ inputs.is-release-build }} # Only feature release builds
 
-                  files: fabric/build/libs/grimac-fabric-${{ env.BUILD_VERSION }}.jar
-                  name: Grim Anticheat (Fabric) ${{ env.BUILD_VERSION }}
+                  files: fabric/build/libs/supergrim-fabric-${{ env.BUILD_VERSION }}.jar
+                  name: SuperGrim (Fabric) ${{ env.BUILD_VERSION }}
                   version: ${{ env.BUILD_VERSION }}
                   version-type: ${{ inputs.release-version-type }}
                   changelog: ${{ steps.changelog.outputs.notes }}
@@ -284,8 +284,8 @@ jobs:
                   modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
                   modrinth-featured: ${{ inputs.is-release-build }} # Only feature release builds
 
-                  files: bukkit/build/libs/grimac-bukkit-${{ env.BUILD_VERSION }}.jar
-                  name: Grim Anticheat (Bukkit) ${{ env.BUILD_VERSION }}
+                  files: bukkit/build/libs/supergrim-bukkit-${{ env.BUILD_VERSION }}.jar
+                  name: SuperGrim (Bukkit) ${{ env.BUILD_VERSION }}
                   version: ${{ env.BUILD_VERSION }}
                   version-type: ${{ inputs.release-version-type }}
                   changelog: ${{ steps.changelog.outputs.notes }}
@@ -295,7 +295,7 @@ jobs:
                     paper
                     folia
                     purpur
-                  game-versions: '>=1.7 <=26.2'
+                  game-versions: '>=1.7 <=26.3'
 
             - name: Publish to API
               if: ${{ inputs.publish-artifacts == true && env.BUILD_UPDATE_TOKEN != '' && inputs.is-release-build == false }}

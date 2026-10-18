@@ -2,13 +2,19 @@
   "schemaVersion": 1,
   "id": "grimac",
   "version": "${version}",
-  "name": "GrimAC",
-  "description": "GrimAC — Fabric meta-mod aggregator. Loads the intermediary or official variant by MC version range.",
+  "name": "SuperGrim",
+  "description": "SuperGrim — Fabric meta-mod aggregator. Loads the intermediary or official variant by MC version range.",
   "license": "GPL-3.0",
   "environment": "*",
   "depends": {
-    "minecraft": [">=1.16.1 <26", ">=26.1.2 <26.3"],
+    "minecraft": [
+      ">=1.16.1 <26",
+      ">=26.1.2 <26.3"
+    ],
     "java": ">=17",
     "fabricloader": ">=0.16"
-  }
+  },
+  "authors": [
+    "Onxe"
+  ]
 }

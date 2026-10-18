@@ -1,7 +1,7 @@
 /**
- *          GroundedGrim Build Configuration
- *          Fork of GrimAC by KaelusMC
- *          https://github.com/KaelusMC/GroundedGrim
+ *          SuperGrim Build Configuration
+ *          Grim fork maintained by Onxe
+ *          https://github.com/hieudieu393/SuperGrim
  *
  * Build Flags:
  * -PshadePE=true   - Enables 'lite' mode
@@ -19,13 +19,13 @@ BuildConfig.init(project)
 val baseVersion = "2.3.74"
 group = "ac.grim.grimac"
 version = VersionUtil.computeVersion(project, baseVersion)
-description = "GroundedGrim - fork of GrimAC by KaelusMC. Simulation anticheat for 1.8-26.2, powered by PacketEvents 2.0."
+description = "SuperGrim by Onxe — a Grim fork with 1.8–26.3 support, powered by PacketEvents 2.0."
 
 ext["timestamp"] = System.currentTimeMillis().toString()
 ext["git_branch"] = VersionUtil.getGitBranch(project, true)
 ext["git_commit"] = VersionUtil.getGitCommitHash(project, true)
-ext["git_org"] = System.getenv("GRIM_GIT_ORG") ?: VersionUtil.getGitUser(project)
-ext["git_repo"] = System.getenv("GRIM_GIT_REPO") ?: "GroundedGrim"
+ext["git_org"] = System.getenv("GRIM_GIT_ORG") ?: "hieudieu393"
+ext["git_repo"] = System.getenv("GRIM_GIT_REPO") ?: "SuperGrim"
 
 println("Build configuration:")
 println("    shadePE            = ${BuildConfig.shadePE}")

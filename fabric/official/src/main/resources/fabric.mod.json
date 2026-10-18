@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "grimac-fabric-official",
   "version": "${version}",
-  "name": "GrimAC (Fabric, official mappings)",
-  "description": "GrimAC anticheat for Minecraft 26.1-26.2. Official-mapped platform compiled directly against the deobfuscated 26.X jar, sibling to fabric-intermediary, which covers 1.16.1-1.21.11. Per-version submodules contribute grim26MainLoad entrypoints.",
+  "name": "SuperGrim (Fabric, official mappings)",
+  "description": "SuperGrim anticheat for Minecraft 26.1-26.3. Official-mapped platform compiled directly against the deobfuscated 26.X jar, sibling to fabric-intermediary, which covers 1.16.1-1.21.11. Per-version submodules contribute grim26MainLoad entrypoints.",
   "license": "GPLv3",
   "environment": "server",
   "entrypoints": {
@@ -46,5 +46,8 @@
   },
   "recommends": {
     "luckperms": "*"
-  }
+  },
+  "authors": [
+    "Onxe"
+  ]
 }

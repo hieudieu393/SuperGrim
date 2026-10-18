@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 public class GrimDebug implements BuildableCommand {
 
     public void register(CommandManager<Sender> commandManager, CloudPlatformCommandArguments arguments) {
-        var grim = commandManager.commandBuilder("grim", "grimac");
+        var grim = commandManager.commandBuilder("grim", "grimac", "supergrim");
 
         commandManager.command(grim
                 .literal("debug")
