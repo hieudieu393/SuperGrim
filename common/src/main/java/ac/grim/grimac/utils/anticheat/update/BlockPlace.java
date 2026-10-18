@@ -59,7 +59,7 @@ public class BlockPlace {
     public Vector3f cursor;
     public final int sequence;
 
-    public BlockPlace(GrimPlayer player, InteractionHand hand, Vector3i position, int faceId, BlockFace face, ItemStack itemStack, @Nullable BlockHitData hitData, int sequence) {
+    public BlockPlace(GrimPlayer player, InteractionHand hand, Vector3i position, int faceId, BlockFace face, ItemStack itemStack, @Nullable HitData hitData, int sequence) {
         this.player = player;
         this.hand = hand;
         this.position = position;
