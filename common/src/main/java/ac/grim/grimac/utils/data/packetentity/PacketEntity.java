@@ -277,6 +277,10 @@ public class PacketEntity extends TypedPacketEntity {
         return interpolation.minimumHitbox(player, this);
     }
 
+    public boolean hasUnconfirmedMovement() {
+        return interpolation != null && interpolation.hasUnconfirmedMovement();
+    }
+
     public OptionalInt getPotionEffectLevel(PotionType effect) {
         final int amplifier = potionsMap == null ? -1 : potionsMap.getInt(effect);
         return amplifier == -1 ? OptionalInt.empty() : OptionalInt.of(amplifier);

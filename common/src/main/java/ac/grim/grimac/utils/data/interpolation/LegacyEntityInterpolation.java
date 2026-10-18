@@ -120,6 +120,11 @@ public final class LegacyEntityInterpolation implements EntityInterpolation {
         this.oldPacketLocation = null;
     }
 
+    @Override
+    public boolean hasUnconfirmedMovement() {
+        return oldPacketLocation != null;
+    }
+
     // If the old and new packet location are split, we need to combine bounding boxes
     @Override
     public void tick(boolean tickingReliably) {

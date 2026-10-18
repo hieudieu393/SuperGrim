@@ -14,6 +14,9 @@ public interface EntityInterpolation {
 
     void confirm(int transaction);
 
+    /** Whether a movement is still between its first and second transactions. */
+    boolean hasUnconfirmedMovement();
+
     void tick(boolean tickingReliably);
 
     void reset(SimpleCollisionBox position);

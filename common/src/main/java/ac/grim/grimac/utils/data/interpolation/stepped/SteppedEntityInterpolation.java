@@ -109,6 +109,11 @@ public final class SteppedEntityInterpolation implements EntityInterpolation {
     }
 
     @Override
+    public boolean hasUnconfirmedMovement() {
+        return state.hasSteps() && lastStep().transaction() > acknowledgedTransaction;
+    }
+
+    @Override
     public void tick(boolean tickingReliably) {
         if (!state.hasSteps()) {
             return;
