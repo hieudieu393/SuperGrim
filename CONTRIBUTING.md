@@ -1,6 +1,6 @@
-# Contributing to GrimAC
+# Contributing to SuperGrim
 
-Thank you for your interest in contributing to GrimAC. This document outlines the guidelines for
+Thank you for your interest in contributing to SuperGrim. This document outlines the guidelines for
 making pull
 requests to the project. *We're usually pretty lenient with pull requests, but this guide will help
 make the process go more smoothly.*
@@ -9,9 +9,9 @@ make the process go more smoothly.*
 
 - **Compatibility**
   - Any changes must be compatible with
-  the [supported environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments) (Spigot, Paper, Folia, Fabric, etc.)
+  the [supported environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments) (Spigot, Paper, and Folia)
   - The plugin must be compatible with minecraft versions 1.8 and higher. Exempting checks from specific versions is acceptable.
-  - The plugin must be able to run on Java 17 or higher. Changes that don't support Java 17 at runtime will not be accepted.
+  - The plugin must run on Java 17 or higher for supported server versions. Use the Java version required by the Minecraft server.
 
 - **Non-acceptable pull requests**
   - Heuristic-based checks will not be accepted; however, basic rate limiting such as blocking attacks based on CPS is acceptable.
@@ -31,8 +31,8 @@ make the process go more smoothly.*
 
 ### Development Notes
 
-- GrimAC is built using [Gradle](https://gradle.org/) kotlin scripts.
-- Java 21 is currently required to build the project. A minimum of Java 17 is required to run it.
+- SuperGrim is built using [Gradle](https://gradle.org/) kotlin scripts.
+- The build uses a Java 21 toolchain and emits Java 17 bytecode. CI runs on JDK 25. Use the runtime required by your Minecraft server.
 
 ### Questions & Support
 

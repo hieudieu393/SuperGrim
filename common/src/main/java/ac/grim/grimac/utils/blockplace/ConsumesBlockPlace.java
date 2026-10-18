@@ -3,6 +3,7 @@ package ac.grim.grimac.utils.blockplace;
 import ac.grim.grimac.player.GrimPlayer;
 import ac.grim.grimac.utils.anticheat.update.BlockPlace;
 import ac.grim.grimac.utils.collisions.AxisUtil;
+import ac.grim.grimac.utils.data.BlockHitData;
 import ac.grim.grimac.utils.latency.CompensatedWorld;
 import ac.grim.grimac.utils.nmsutil.Materials;
 import com.github.retrooper.packetevents.protocol.item.type.ItemTypes;
@@ -100,7 +101,8 @@ public class ConsumesBlockPlace {
 
     private static boolean goodBellHit(@NotNull WrappedBlockState bell, @NotNull BlockPlace place) {
         BlockFace direction = place.getFace();
-        return place.hitData != null && isProperHit(bell, direction, place.hitData.getRelativeBlockHitLocation().getY());
+        return place.hitData instanceof BlockHitData hitData
+                && isProperHit(bell, direction, hitData.getRelativeBlockHitLocation().getY());
     }
 
     private static boolean isProperHit(@NotNull WrappedBlockState bell, @NotNull BlockFace direction, double p_49742_) {

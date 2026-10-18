@@ -21,7 +21,7 @@ public class GrimLogger implements BuildableCommand {
 
     @Override
     public void register(CommandManager<Sender> commandManager, CloudPlatformCommandArguments arguments) {
-        var base = commandManager.commandBuilder("grim", "grimac").literal("logger").permission("grim.logger");
+        var base = commandManager.commandBuilder("grim", "grimac", "supergrim").literal("logger").permission("grim.logger");
 
         commandManager.command(base
                 .literal("filter")

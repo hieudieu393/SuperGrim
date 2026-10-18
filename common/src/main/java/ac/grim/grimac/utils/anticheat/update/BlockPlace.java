@@ -8,7 +8,7 @@ import ac.grim.grimac.utils.collisions.blocks.DoorHandler;
 import ac.grim.grimac.utils.collisions.datatypes.CollisionBox;
 import ac.grim.grimac.utils.collisions.datatypes.ComplexCollisionBox;
 import ac.grim.grimac.utils.collisions.datatypes.SimpleCollisionBox;
-import ac.grim.grimac.utils.data.BlockHitData;
+import ac.grim.grimac.utils.data.HitData;
 import ac.grim.grimac.utils.data.packetentity.PacketEntity;
 import ac.grim.grimac.utils.latency.CompensatedWorld;
 import ac.grim.grimac.utils.math.GrimMath;
@@ -51,15 +51,15 @@ public class BlockPlace {
     @Getter private boolean isCancelled;
     private final GrimPlayer player;
     public final ItemStack itemStack;
-    public final StateType material;
-    public final @Nullable BlockHitData hitData;
+    @Getter public final StateType material;
+    public final @Nullable HitData hitData;
     @Getter private int faceId;
     @Getter private BlockFace face;
     public boolean isInside;
     public Vector3f cursor;
     public final int sequence;
 
-    public BlockPlace(GrimPlayer player, InteractionHand hand, Vector3i position, int faceId, BlockFace face, ItemStack itemStack, @Nullable BlockHitData hitData, int sequence) {
+    public BlockPlace(GrimPlayer player, InteractionHand hand, Vector3i position, int faceId, BlockFace face, ItemStack itemStack, @Nullable HitData hitData, int sequence) {
         this.player = player;
         this.hand = hand;
         this.position = position;

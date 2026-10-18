@@ -1,15 +1,12 @@
 <div align="center">
- <h1>GrimAC</h1>
+ <h1>SuperGrim</h1>
 
  <div>
-  <a href="https://github.com/GrimAnticheat/Grim/actions/workflows/gradle-publish.yml">
-   <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/GrimAnticheat/Grim/gradle-publish.yml?style=flat&logo=github"/>
+  <a href="https://github.com/hieudieu393/SuperGrim/actions/workflows/gradle-publish.yml">
+   <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/hieudieu393/SuperGrim/gradle-publish.yml?style=flat&logo=github"/>
   </a>&nbsp;&nbsp;
-  <a href="https://modrinth.com/plugin/grimac">
-   <img alt="Modrinth" src="https://img.shields.io/modrinth/v/LJNGWSvH?style=flat&label=version&logo=modrinth">
-  </a>&nbsp;&nbsp;
-  <a href="https://modrinth.com/plugin/grimac#download">
-   <img alt="Downloads" src="https://img.shields.io/modrinth/dt/LJNGWSvH?style=flat&logo=modrinth&label=downloads&link=https%3A%2F%2Fmodrinth.com%2Fplugin%2Fgrimac%23download">
+  <a href="https://github.com/hieudieu393/SuperGrim/releases">
+   <img alt="Latest release" src="https://img.shields.io/github/v/release/hieudieu393/SuperGrim?style=flat&logo=github">
   </a>&nbsp;&nbsp;
   <a href="https://discord.grim.ac">
    <img alt="Discord" src="https://img.shields.io/discord/811396969670901800?style=flat&label=discord&logo=discord">
@@ -18,30 +15,22 @@
  <br>
 </div>
 
-GrimAC is an open source Minecraft anticheat designed to support the latest versions of Minecraft.
-It currently supports Minecraft versions 1.8–26.2. Geyser players are fully exempt from the anticheat to prevent false positives.
-This project is considered feature-complete for the 2.0 (open-source) branch. If you would like a bug fix or enhancement and cannot sponsor the work, pull requests are welcome.
-A premium version is planned, which will offer additional subscription-based paid checks, such as heuristics.
+SuperGrim is an open-source Minecraft anticheat fork of [Grim](https://github.com/GrimAnticheat/Grim), maintained by **Onxe**. It targets Bukkit/Spigot, Paper, and Folia on Minecraft versions 1.8–26.3 and keeps the existing SuperGrim-specific checks and behavior while tracking upstream changes.
 
 ## Downloads
 
-- Latest updates:
-  - **[Modrinth](https://modrinth.com/plugin/grimac)** *(recommended)*
-  - GitHub
-  artifacts: [Bukkit](https://nightly.link/GrimAnticheat/Grim/workflows/gradle-publish/2.0/grimac-bukkit.zip), [Fabric](https://nightly.link/GrimAnticheat/Grim/workflows/gradle-publish/2.0/grimac-fabric.zip) *(bleeding edge)*
-- Major releases only:
-  - ~~[Hangar](https://hangar.papermc.io/GrimAnticheat/GrimAnticheat)~~
-  - ~~[SpigotMC](https://www.spigotmc.org/resources/grim-anticheat.99923/)~~
+- **[GitHub Releases](https://github.com/hieudieu393/SuperGrim/releases)** for published builds.
+- **[GitHub Actions](https://github.com/hieudieu393/SuperGrim/actions/workflows/gradle-publish.yml)** for development builds.
 
 ## Requirements & Installation
 
-- Java 17 or higher. *For more details, see [Updating-to-Java-17](https://github.com/GrimAnticheat/Grim/wiki/Updating-to-Java-17).*
-- A Spigot, Paper, Folia, or Fabric server environment. *For more details, see [Supported-environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments).*
+- Java 17 or higher for supported server versions. Use the Java version required by your Minecraft server.
+- A Spigot, Paper, or Folia server environment. *For more details, see [Supported-environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments).*
 
 If you use a proxy such as Velocity or BungeeCord:
-- If you use Geyser, Floodgate must be installed on the backend server (where Grim is) so Grim can access the Floodgate API.
+- If you use Geyser, Floodgate must be installed on the backend server (where SuperGrim runs) so it can access the Floodgate API.
 - If you use ViaVersion, it must be installed on the backend server (where Grim is) ONLY.
-  Grim does not support having ViaVersion installed on the proxy, even if it is also installed on the backend.
+  SuperGrim does not support having ViaVersion installed on the proxy, even if it is also installed on the backend.
 
 ## Resources
 
@@ -56,20 +45,20 @@ are.
 
 ## Developer Plugin API
 
-Grim's plugin API allows you to integrate Grim into your own plugins. Visit
+SuperGrim's plugin API allows you to integrate it into your own plugins. Visit
 the [plugin API repository](https://github.com/GrimAnticheat/GrimAPI) for the source code and more
 information.
 
 ## Compiling From Source
 
-1. `git clone https://github.com/GrimAnticheat/Grim.git`
-2. `cd Grim`
+1. `git clone https://github.com/hieudieu393/SuperGrim.git`
+2. `cd SuperGrim`
 3. `./gradlew build`
-4. The final jars will compile into the `<platform>/build/libs` folders
+4. The plugin jar is written to `bukkit/build/libs/supergrim-bukkit-<version>.jar`.
 
-## Grim Supremacy
+## SuperGrim Core Features
 
-What makes Grim stand out against other anticheats?
+What makes SuperGrim stand out against other anticheats?
 
 ### Movement Simulation Engine
 

@@ -7,7 +7,6 @@ import org.jetbrains.annotations.Nullable;
 @AllArgsConstructor
 public enum Platform {
 
-    FABRIC("fabric"),
     BUKKIT("bukkit"),
     FOLIA("folia");
 

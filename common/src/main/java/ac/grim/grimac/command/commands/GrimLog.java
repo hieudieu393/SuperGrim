@@ -75,7 +75,7 @@ public class GrimLog implements BuildableCommand {
 
     @Override
     public void register(CommandManager<Sender> commandManager, CloudPlatformCommandArguments arguments) {
-        Command<Sender> command = commandManager.commandBuilder("grim", "grimac")
+        Command<Sender> command = commandManager.commandBuilder("grim", "grimac", "supergrim")
                 .literal("log", "logs")
                 .permission("grim.log")
                 .required("flagId", IntegerParser.integerParser())
@@ -86,7 +86,7 @@ public class GrimLog implements BuildableCommand {
                 .command(command)
                 .command(commandManager.commandBuilder("gl").proxies(command));
 
-        Command<Sender> lastCommand = commandManager.commandBuilder("grim", "grimac")
+        Command<Sender> lastCommand = commandManager.commandBuilder("grim", "grimac", "supergrim")
                 .literal("log", "logs")
                 .literal("last")
                 .permission("grim.log")
@@ -96,7 +96,7 @@ public class GrimLog implements BuildableCommand {
                 .build();
         commandManager.command(lastCommand);
 
-        commandManager.command(commandManager.commandBuilder("grim", "grimac")
+        commandManager.command(commandManager.commandBuilder("grim", "grimac", "supergrim")
                 .literal("log", "logs")
                 .literal("range")
                 .permission("grim.log")

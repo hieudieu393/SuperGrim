@@ -49,8 +49,7 @@ jobs:
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         with:
           tag_name: "${{ steps.version.outputs.tag }}"
-          name: "GroundedGrim ${{ steps.version.outputs.version }}"
+          name: "SuperGrim ${{ steps.version.outputs.version }}"
           body: "Automatic release from commit ${{ env.HEAD_SHA }}."
           files: |
-            bukkit/build/libs/grimac-bukkit-*.jar
-            fabric/build/libs/grimac-fabric-*.jar
+            bukkit/build/libs/supergrim-bukkit-*.jar
